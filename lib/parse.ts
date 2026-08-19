@@ -320,6 +320,11 @@ const SYSTEM_PROMPT = `You convert a car shopper's free-text description into JS
 Respond with ONLY the JSON object, no prose, no markdown fences.`;
 
 async function tryOllama(text: string): Promise<Partial<Preferences> | null> {
+  // Vercel's serverless functions run in an isolated sandbox with no
+  // "localhost" Ollama server ever reachable — attempting the fetch here
+  // would just burn several seconds (or hang) before falling through to
+  // the rule-based tier anyway, so skip it outright in that environment.
+  if (process.env.VERCEL) return null;
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 8000);
