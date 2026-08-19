@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "public",
+  "installCommand": "npm install",
+  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }]
+}

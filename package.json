@@ -1,0 +1,32 @@
+{
+  "name": "carconfig",
+  "version": "1.0.0",
+  "description": "Explainable vehicle recommendation engine: weighted percentile scoring + content-based similarity ranking, a rule-based/local-LLM natural-language preference parser, and real marketplace listing search links.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "seed": "tsx scripts/seed.ts",
+    "seed:reset": "tsx scripts/seed.ts --reset",
+    "dev": "concurrently -k -n web,api -c blue,green \"node web/build.js --watch\" \"tsx --watch server/index.ts\"",
+    "build:web": "node web/build.js",
+    "start": "npm run build:web && tsx server/index.ts",
+    "test": "node --experimental-sqlite --import=tsx --test tests/*.test.ts",
+    "test:e2e": "node tests/e2e.smoke.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "concurrently": "^9.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/node": "^22.0.0"
+  }
+}
