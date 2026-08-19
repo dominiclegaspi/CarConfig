@@ -20,7 +20,7 @@ import type {
   RecommendResponse,
   OwnershipEstimate,
   PriorityKey,
-} from "./types.ts";
+} from "./types.js";
 
 const SUBSCORE_KEYS: (keyof SubScores)[] = [
   "performance",

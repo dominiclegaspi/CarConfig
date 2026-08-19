@@ -1,6 +1,6 @@
-import { getAllVehicles } from "../lib/db.ts";
-import { buildListingLinks } from "../lib/listings.ts";
-import type { ApiRequest, ApiResponse } from "./_util.ts";
+import { getAllVehicles } from "../lib/db.js";
+import { buildListingLinks } from "../lib/listings.js";
+import type { ApiRequest, ApiResponse } from "./_util.js";
 
 function first(v: string | string[] | undefined, fallback = ""): string {
   return Array.isArray(v) ? v[0] ?? fallback : v ?? fallback;

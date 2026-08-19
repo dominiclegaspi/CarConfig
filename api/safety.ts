@@ -1,5 +1,5 @@
-import { getNhtsaSafetyRating } from "../lib/nhtsa.ts";
-import type { ApiRequest, ApiResponse } from "./_util.ts";
+import { getNhtsaSafetyRating } from "../lib/nhtsa.js";
+import type { ApiRequest, ApiResponse } from "./_util.js";
 
 function first(v: string | string[] | undefined, fallback = ""): string {
   return Array.isArray(v) ? v[0] ?? fallback : v ?? fallback;

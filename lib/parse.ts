@@ -15,7 +15,7 @@
 //      product degrades gracefully instead of breaking.
 // ---------------------------------------------------------------------------
 
-import type { Preferences, PriorityKey } from "./types.ts";
+import type { Preferences, PriorityKey } from "./types.js";
 
 export type ParseSource = "ollama" | "anthropic" | "rules";
 

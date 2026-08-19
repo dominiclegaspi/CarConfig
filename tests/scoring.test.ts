@@ -4,9 +4,9 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { applyHardFilters, buildWeights, scoreCandidates, rankByWeightedScore, recommend } from "../lib/scoring.ts";
-import { mergePreferences } from "../lib/defaults.ts";
-import type { Vehicle } from "../lib/types.ts";
+import { applyHardFilters, buildWeights, scoreCandidates, rankByWeightedScore, recommend } from "../lib/scoring.js";
+import { mergePreferences } from "../lib/defaults.js";
+import type { Vehicle } from "../lib/types.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const vehicles: Vehicle[] = JSON.parse(

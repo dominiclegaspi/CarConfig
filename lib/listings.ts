@@ -11,7 +11,7 @@
 // filtering correctly the user still lands on a working search page for
 // that make and can refine from there.
 
-import type { Vehicle, Condition } from "./types.ts";
+import type { Vehicle, Condition } from "./types.js";
 
 function slugify(s: string): string {
   return s

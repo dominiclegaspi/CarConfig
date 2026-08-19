@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { ruleBasedParse } from "../lib/parse.ts";
+import { ruleBasedParse } from "../lib/parse.js";
 
 test("extracts a 'spend more than X' ceiling as budgetMax, not literally as a minimum", () => {
   const prefs = ruleBasedParse("I don't want to spend more than 25k on this");

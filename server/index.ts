@@ -9,13 +9,13 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { getAllVehicles } from "../lib/db.ts";
-import { recommend } from "../lib/scoring.ts";
-import { buildListingLinks } from "../lib/listings.ts";
-import { getNhtsaSafetyRating } from "../lib/nhtsa.ts";
-import { parsePreferences } from "../lib/parse.ts";
-import { mergePreferences } from "../lib/defaults.ts";
-import type { Preferences } from "../lib/types.ts";
+import { getAllVehicles } from "../lib/db.js";
+import { recommend } from "../lib/scoring.js";
+import { buildListingLinks } from "../lib/listings.js";
+import { getNhtsaSafetyRating } from "../lib/nhtsa.js";
+import { parsePreferences } from "../lib/parse.js";
+import { mergePreferences } from "../lib/defaults.js";
+import type { Preferences } from "../lib/types.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = path.join(__dirname, "..", "public");

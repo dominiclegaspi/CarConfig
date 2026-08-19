@@ -1,4 +1,4 @@
-import type { Preferences } from "./types.ts";
+import type { Preferences } from "./types.js";
 
 export const DEFAULT_PREFERENCES: Preferences = {
   budgetMin: 0,
